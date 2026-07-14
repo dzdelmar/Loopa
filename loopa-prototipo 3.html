@@ -535,7 +535,7 @@
           <div style="margin-top:24px">
             <div class="app-field">
               <label>Nombre de tu bodega</label>
-              <input type="text" id="obStore" placeholder="Bodega Didi" value="Bodega Doña Didi">
+              <input type="text" id="obStore" placeholder="Bodega Didi" value="Bodega Didi">
             </div>
             <div class="app-field">
               <label>Tu nombre</label>
@@ -742,7 +742,7 @@ function fakeParseProduct(t){
   if(t.includes('yogur')){name='Yogurt Gloria';qty='12 unidades';price='$1.20';total='$14.40';exp='28 jun 2026';alert='Vence en 13 días — está OK por ahora. 👍';}
   else if(t.includes('aceite')){name='Aceite Primor 1L';qty='3 unidades';price='$8.00';total='$24.00';exp='20 jun 2026';alert='⚠️ Vence en 5 días — te recomiendo moverlo al frente.';}
   else if(t.includes('leche')||t.includes('lácte')){name='Leche Gloria';qty='10 unidades';price='$1.10';total='$11.00';exp='25 jun 2026';alert='Vence en 10 días. Te aviso si no se mueve.';}
-  else if(t.includes('pan')){name='Pan de molde';qty='6 unidades';price='$1.50';total='$9.00';exp='18 jun 2026';alert='⚠️ Vence en 3 días — ideal para una oferta rápida.';}
+  else if(t.includes('jugo')){name='jugo';qty='6 unidades';price='$1.50';total='$9.00';exp='20 dic 2026';alert='Está OK por ahora. 👍';}
   else{
     const m=t.match(/(\d+)/);if(m)qty=m[1]+' unidades';
     name=t.split(',')[0].replace(/llegaron|llegó|tengo|hay|\d+/g,'').trim()||'Producto';
@@ -784,8 +784,8 @@ function simAudio(tipo){
       addBubble(document.getElementById('sellArea'),'user','🎙️ <i>"vendí 5 yogures y 2 aceites"</i>');
       respondSell('vendí 5 yogures y 2 aceites');
     }else{
-      addBubble(chatArea(),'user','🎙️ <i>"llegaron 6 panes a $1.50, vencen el jueves"</i>');
-      respondProduct('llegaron 6 panes a 1.50 vencen jueves');
+      addBubble(chatArea(),'user','🎙️ <i>"llegaron 6 jugos a $1.50, vencen el 20 de diciembre"</i>');
+      respondProduct('llegaron 6 jugos a $1.50, vencen el 20 de diciembre');
     }
   },2200);
 }
